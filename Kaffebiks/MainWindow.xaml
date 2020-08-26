@@ -1,0 +1,118 @@
+﻿<Window x:Class="Kaffebiks.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kaffebiks"
+        mc:Ignorable="d"
+        Title="EUC Kaffebiks" Height="450" Width="800">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="772">
+            <TabItem Header="Get a coffee">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Coffee name" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="106,27,0,0" VerticalAlignment="Top" Width="162" Name="cmbCoffee" DisplayMemberPath="CoffeeName"/>
+                    <Button Content="Find coffee" HorizontalAlignment="Left" Margin="288,27,0,0" VerticalAlignment="Top" Width="75" Name="btnFindCoffee" Click="BtnFindCoffee_Click"/>
+                    <Image HorizontalAlignment="Left" Height="199" Margin="536,163,0,0" VerticalAlignment="Top" Width="220" Name="imgCoffee"/>
+                    <Label Content="Coffee ID" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="106,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" IsEnabled="False" Name="txtCoffeeID"/>
+                    <Label Content="" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.652,0.563"/>
+                    <Label Content="Image ID" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.636,-0.289"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="106,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" IsEnabled="False" Name="txtImageID"/>
+                    <Label Content="Description" HorizontalAlignment="Left" Margin="10,256,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.466,3.421"/>
+                    <TextBox HorizontalAlignment="Left" Height="97" Margin="106,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" IsEnabled="False" Name="txtDesc"/>
+                    <Label Content="Price" HorizontalAlignment="Left" Margin="10,163,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="106,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" RenderTransformOrigin="0.045,0.41" IsEnabled="False" Name="txtCoffeePrice"/>
+                    <Label Content="Added in stock" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.377,-2.415"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="106,210,0,0" VerticalAlignment="Top" Width="162" IsEnabled="False" Name="dtAddedInStock"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="536,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" IsEnabled="False" Name="txtAmountInStock"/>
+                    <Label Content="Amount in stock" HorizontalAlignment="Left" Margin="416,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.338,0.524"/>
+                    <Label Content="Is in stock" HorizontalAlignment="Left" Margin="416,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.033,-0.083"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="536,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" IsEnabled="False" Name="txtIsInStock"/>
+                    <Label Content="Country" HorizontalAlignment="Left" Margin="416,121,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="536,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" IsEnabled="False" Name="txtCoffeeCountry"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Add a coffee">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Coffee name" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.373,-0.15"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="103,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Name="txtAddCoffeName"/>
+                    <Label Content="Description" HorizontalAlignment="Left" Margin="13,205,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="137" Margin="103,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Name="txtAddCoffeeDesc"/>
+                    <Label Content="Country" HorizontalAlignment="Left" Margin="13,81,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.544,0.344"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="103,85,0,0" VerticalAlignment="Top" Width="161" Name="cmbAddCountry"/>
+                    <Label Content="ImageID" HorizontalAlignment="Left" Margin="13,140,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.917,-1.136"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="103,144,0,0" VerticalAlignment="Top" Width="161" Name="cmbImageID">
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>2</ComboBoxItem>
+                        <ComboBoxItem>3</ComboBoxItem>
+                        <ComboBoxItem>4</ComboBoxItem>
+                        <ComboBoxItem>5</ComboBoxItem>
+                        <ComboBoxItem>6</ComboBoxItem>
+                        <ComboBoxItem>7</ComboBoxItem>
+                        <ComboBoxItem>8</ComboBoxItem>
+                    </ComboBox>
+                    <Label Content="Add to stock" HorizontalAlignment="Left" Margin="405,29,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.165,-0.109"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="527,32,0,0" VerticalAlignment="Top" Width="161" Name="dtAddDateInStock"/>
+                    <Label Content="In stock" HorizontalAlignment="Left" Margin="405,81,0,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="527,85,0,0" VerticalAlignment="Top" Width="161" Name="cmbAddIsInStock">
+                        <ComboBoxItem Name="True">True</ComboBoxItem>
+                        <ComboBoxItem Name="False">False</ComboBoxItem>
+                    </ComboBox>
+                    <Label Content="Amount in stock" HorizontalAlignment="Left" Margin="405,140,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="527,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Name="txtAddAmount"/>
+                    <Label Content="Price" HorizontalAlignment="Left" Margin="405,205,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="527,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Name="txtAddPrice"/>
+                    <Button Content="Add coffee" HorizontalAlignment="Left" Margin="405,270,0,0" VerticalAlignment="Top" Width="283" Height="41" Name="btnAddCoffee" Click="BtnAddCoffee_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Delete coffee">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Coffee name" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="106,27,0,0" VerticalAlignment="Top" Width="162" x:Name="cmbDeleteCoffeeByName" DisplayMemberPath="CoffeeName"/>
+                    <Button Content="Delete Coffee" HorizontalAlignment="Left" Margin="289,210,0,0" VerticalAlignment="Top" Width="75" x:Name="btnFindDeleteCoffee" Click="BtnFindDeleteCoffee_Click"/>
+                    <Label Content="Coffee ID" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="106,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" IsEnabled="False" x:Name="txtCoffeeID_Copy"/>
+                    <Label Content="Image ID" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.636,-0.289"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="106,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" IsEnabled="False" x:Name="txtImageID_Copy"/>
+                    <Label Content="Description" HorizontalAlignment="Left" Margin="10,256,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.466,3.421"/>
+                    <TextBox HorizontalAlignment="Left" Height="97" Margin="106,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="288" IsEnabled="False" x:Name="txtDesc_Copy"/>
+                    <Label Content="Price" HorizontalAlignment="Left" Margin="10,163,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="106,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" RenderTransformOrigin="0.045,0.41" IsEnabled="False" x:Name="txtCoffeePrice_Copy"/>
+                    <Label Content="Added in stock" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.377,-2.415"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="106,210,0,0" VerticalAlignment="Top" Width="162" IsEnabled="False" x:Name="dtAddedInStock_Copy"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="536,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" IsEnabled="False" x:Name="txtAmountInStock_Copy"/>
+                    <Label Content="Amount in stock" HorizontalAlignment="Left" Margin="416,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.338,0.524"/>
+                    <Label Content="Is in stock" HorizontalAlignment="Left" Margin="416,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.033,-0.083"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="536,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" IsEnabled="False" x:Name="txtIsInStock_Copy"/>
+                    <Label Content="Country" HorizontalAlignment="Left" Margin="416,121,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="536,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" IsEnabled="False" x:Name="txtCoffeeCountry_Copy"/>
+                    <Image HorizontalAlignment="Left" Height="199" Margin="536,163,0,0" VerticalAlignment="Top" Width="220" x:Name="imgCoffee_Copy"/>
+                    <Button Content="Find coffee" HorizontalAlignment="Left" Margin="289,29,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.488,-0.791" Name="btnFindCoffeeToDel" Click="BtnFindCoffeeToDel_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="See all coffees">
+                <Grid Background="#FFE5E5E5">
+                    <ListView HorizontalAlignment="Left" Height="371" VerticalAlignment="Top" Width="766" Name="ListAllCoffees">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="ID" x:Name="ID" DisplayMemberBinding="{Binding CoffeeId}"/>
+                                <GridViewColumn Header="Name"  x:Name="Name" DisplayMemberBinding="{Binding CoffeeName}"/>
+                                <GridViewColumn Header="Price" x:Name="Price" DisplayMemberBinding="{Binding Price}"/>
+                                <GridViewColumn Header="Description" Width="140" x:Name="Description" DisplayMemberBinding="{Binding Description}"/>
+                                <GridViewColumn Header="Country" x:Name="Country" DisplayMemberBinding="{Binding OriginCountry}"/>
+                                <GridViewColumn Header="In stock" x:Name="InStock" DisplayMemberBinding="{Binding InStock}"/>
+                                <GridViewColumn Header="Amount" x:Name="Amount" DisplayMemberBinding="{Binding AmountInStock}"/>
+                                <GridViewColumn Header="First added" x:Name="FirstAdded" DisplayMemberBinding="{Binding FirstAddedToStockDate}"/>
+                                <GridViewColumn Header="ImageId" x:Name="ImageId" DisplayMemberBinding="{Binding ImageId}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
